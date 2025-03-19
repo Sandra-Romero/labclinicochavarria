@@ -8,8 +8,6 @@ hamburger.addEventListener('click', () => {
     menu.classList.toggle('active');
 });
 
-
-
 // Array de servicios
 const servicios = [
      {
