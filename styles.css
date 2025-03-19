@@ -319,3 +319,66 @@ footer {
 .social-icon:hover {
     transform: scale(1.1); /* Efecto de hover para hacer los íconos más grandes */
 }
+
+-----------------------------------------------
+/* Menu hamburguesa */
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+}
+
+ul.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul.nav-list li {
+    margin: 0 15px;
+}
+
+ul.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Estilo para el menú hamburguesa */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    ul.nav-list {
+        display: none; /* Ocultar menú en pantallas pequeñas */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #1f4e79;/*azul oscuro*/
+        position: absolute;
+        top: 60px; /* Ajustar debajo del navbar */
+        left: 0;
+        z-index: 1000;
+    }
+
+    ul.nav-list li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block; /* Mostrar el botón de hamburguesa */
+    }
+
+    ul.nav-list.active {
+        display: flex; /* Mostrar el menú cuando está activo */
+    }
+}
